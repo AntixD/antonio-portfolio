@@ -11,6 +11,6 @@ export const personalInfo: PersonalInfo = {
     phone: '+385 91 616 6602',
     location: 'Zagreb, Croatia',
     linkedin: 'https://linkedin.com/in/antonio-dedic',
-    github: 'https://github.com/antonio-dedic',
+    github: 'https://github.com/antixd',
   },
 };
