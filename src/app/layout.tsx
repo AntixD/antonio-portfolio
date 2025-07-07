@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Antonio Dedić - Software Developer',
     description: 'Building the future, one line of code at a time',
-    url: 'https://your-domain.com',
+    url: 'https://ant0nio.dev',
     siteName: 'Antonio Dedić Portfolio',
     images: [
       {
