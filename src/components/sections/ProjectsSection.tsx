@@ -89,7 +89,7 @@ const ProjectFilters: React.FC<{
   isVisible: boolean;
 }> = memo(({ filters, activeFilter, onFilterChange, isVisible }) => (
   <div
-    className={`flex flex-wrap justify-center gap-4 mb-12 transform transition-all duration-700 ${
+    className={`flex flex-wrap justify-center gap-4 mb-12 transform transition-all duration-700  ${
       isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
     }`}
   >
@@ -97,7 +97,7 @@ const ProjectFilters: React.FC<{
       <button
         key={filter}
         onClick={() => onFilterChange(filter)}
-        className={`px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 ${
+        className={`px-6 py-2 cursor-pointer rounded-full transition-all duration-300 transform hover:scale-105 ${
           activeFilter === filter
             ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
             : 'glass-effect text-gray-300 hover:text-white'

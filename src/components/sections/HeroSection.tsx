@@ -27,7 +27,7 @@ const HeroSection: React.FC = memo(() => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <h1 className="text-5xl md:text-8xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl mt-20 md:mt-0 md:text-8xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
               {personalInfo.name}
             </span>
@@ -49,7 +49,7 @@ const HeroSection: React.FC = memo(() => {
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <GradientButton
               onClick={() => scrollToSection('projects')}
-              className="from-cyan-500 to-blue-600"
+              className="from-cyan-500 to-blue-600 cursor-pointer"
             >
               <span>View My Projects</span>
               <ArrowRight className="w-4 h-4" />
@@ -57,7 +57,7 @@ const HeroSection: React.FC = memo(() => {
 
             <button
               onClick={() => scrollToSection('contact')}
-              className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-full font-semibold hover:bg-cyan-500 hover:text-black transition-all duration-300"
+              className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-full font-semibold hover:bg-cyan-500 hover:text-black transition-all duration-300 cursor-pointer"
             >
               Get In Touch
             </button>

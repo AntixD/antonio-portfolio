@@ -28,7 +28,7 @@ const FooterInfo: React.FC = memo(() => (
 const FooterCopyright: React.FC = memo(() => (
   <div className="mt-8 pt-8 border-t border-gray-800/50 text-center">
     <p className="text-sm text-gray-500">
-      © 2024 {personalInfo.name}. Built with Next.js, TypeScript, Three.js, and
+      © 2025 {personalInfo.name}. Built with Next.js, TypeScript, Three.js, and
       passion for innovation.
     </p>
     <p className="text-xs mt-2 text-gray-600">"{personalInfo.tagline}"</p>

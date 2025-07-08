@@ -1,38 +1,14 @@
+// src/app/games/page.tsx
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
 import { Gamepad2, ArrowLeft, Trophy, Target, Brain, Play } from 'lucide-react';
+import { games } from '@/data/games/game-arcade';
 
 export default function GamesPage() {
-  const games = [
-    {
-      id: 'hangman',
-      title: 'Hangman Challenge',
-      description:
-        'Guess the programming term before the stick figure meets its doom! Features tech words because... why not torture you with acronyms? 😈',
-      icon: '🎯',
-      difficulty: 'Medium',
-      color: 'from-red-500 to-pink-500',
-      tech: 'React + Logic',
-      features: ['Programming Terms', 'Visual Hangman', 'Score Tracking'],
-    },
-    {
-      id: 'tic-tac-toe',
-      title: 'Tic-Tac-Toe AI',
-      description:
-        'The classic game with a twist - can you beat my unbeatable AI? (Spoiler: Good luck with that! I may have gone overboard...)',
-      icon: '⭕',
-      difficulty: 'Easy to Impossible',
-      color: 'from-blue-500 to-cyan-500',
-      tech: 'React + Minimax AI',
-      features: ['Smart AI', 'Multiple Modes', 'Win Tracking'],
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-black text-white relative">
-      {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/10 to-cyan-900/20"></div>
         {[...Array(20)].map((_, i) => (
@@ -51,7 +27,6 @@ export default function GamesPage() {
         ))}
       </div>
 
-      {/* Header */}
       <div className="relative z-10 p-6 border-b border-gray-800/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link
@@ -73,7 +48,6 @@ export default function GamesPage() {
         </div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto p-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
@@ -113,22 +87,22 @@ export default function GamesPage() {
                   </div>
                 </div>
 
-                <h3 className="text-3xl font-bold mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
+                <h3 className="text-3xl font-bold mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-orange-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
                   {game.title}
                 </h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-white mb-6 leading-relaxed">
                   {game.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-3">
+                  <h4 className="text-sm font-semibold text-white mb-3">
                     Features:
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {game.features.map((feature) => (
                       <span
                         key={feature}
-                        className="text-xs bg-gray-800/50 px-3 py-1 rounded-full text-gray-300"
+                        className="text-xs bg-gray-700/10 px-3 py-1 rounded-full text-white"
                       >
                         {feature}
                       </span>
@@ -137,12 +111,12 @@ export default function GamesPage() {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500 bg-gray-900/50 px-3 py-2 rounded-lg">
+                  <span className="text-sm text-white-500 bg-gray-700/10 px-3 py-2 rounded-lg">
                     Built with {game.tech}
                   </span>
                   <Link href={`/games/${game.id}`}>
                     <button
-                      className={`flex items-center gap-2 bg-gradient-to-r ${game.color} text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                      className={`flex items-center gap-2 bg-gradient-to-r ${game.color} text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer`}
                     >
                       <Play className="w-5 h-5" />
                       <span>Play Now</span>
@@ -154,7 +128,6 @@ export default function GamesPage() {
           ))}
         </div>
 
-        {/* Fun Stats */}
         <div className="bg-gray-900/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800/50">
           <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
             Developer Achievement Board
@@ -162,7 +135,7 @@ export default function GamesPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center p-6 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all duration-300">
               <Trophy className="w-10 h-10 text-yellow-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">2</div>
+              <div className="text-3xl font-bold text-white mb-1">4</div>
               <div className="text-sm text-gray-400">Games Built</div>
             </div>
             <div className="text-center p-6 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all duration-300">
@@ -185,7 +158,6 @@ export default function GamesPage() {
           </div>
         </div>
 
-        {/* Call to Action */}
         <div className="text-center mt-16 p-8 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20 rounded-2xl border border-gray-800/50">
           <h3 className="text-2xl font-bold mb-4 text-white">
             Impressed? Let's Work Together!

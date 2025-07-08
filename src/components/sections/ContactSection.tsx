@@ -258,21 +258,19 @@ const InteractiveFun: React.FC<{
         </h3>
 
         <div className="space-y-6">
-          {/* Coffee Counter */}
           <div className="text-center p-6 bg-gray-800/30 rounded-xl">
             <button
               onClick={onCoffeeClick}
-              className="mb-4 p-4 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-110"
+              className="mb-4 p-4 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-110 cursor-pointer"
             >
               <Coffee className="w-8 h-8 text-white" />
             </button>
             <p className="text-lg font-semibold mb-2">Developer Fuel Station</p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400 ">
               {getCoffeeMessage(coffeeCount)}
             </p>
           </div>
 
-          {/* Developer Stats */}
           <div className="grid grid-cols-2 gap-4">
             <div className="text-center p-4 bg-gray-800/30 rounded-xl">
               <Zap className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
@@ -286,7 +284,6 @@ const InteractiveFun: React.FC<{
             </div>
           </div>
 
-          {/* Quick Contact */}
           <div className="text-center">
             <p className="text-gray-400 mb-4">Ready to start a project?</p>
             <a
@@ -328,7 +325,7 @@ const GamesCallToAction: React.FC<{ isVisible: boolean }> = memo(
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <button
             onClick={() => (window.location.href = '/games')}
-            className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center space-x-2 shadow-lg"
+            className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center space-x-2 shadow-lg cursor-pointer"
           >
             <Gamepad2 className="w-6 h-6" />
             <span>Play My Games</span>
